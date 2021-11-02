@@ -1,5 +1,5 @@
 // import * as THREE from "./lib/three" // i was just using this to get some auto-completion for my VS Code
-import { colors, settings } from "/defaults.js"
+import { colors, settings } from "./defaults.js"
 
 var scene = new THREE.Scene()
 
