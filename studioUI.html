@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roblox Studio WEB</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta2/css/all.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,9 @@
         <button class="tab">VIEW</button>
     </nav>
     <nav class="main">
-
+        <div class="home">
+            <button class="run"><i class="fa-solid fa-play"></i></button>
+        </div>
     </nav>
     <nav class="left">
 
@@ -32,9 +35,8 @@
             <button class="tab">Script</button>
             <button class="tab">LocalScript</button>
             <button class="tab">ModuleScript</button>
-            <br>
-            <iframe src="index.html" frameborder="0" id="game"></iframe>
         </div>
+        <!-- <iframe src="index.html" frameborder="0" id="game"></iframe> -->
     </div>
     <script>
         var tabs = document.querySelectorAll("nav.tabs .tab")
@@ -58,6 +60,13 @@
                 activeSTab = e
             })
         })
+
+        var events = new BroadcastChannel("events")
+
+        events.postMessage("run")
     </script>
+    <script src="lib/three.js"></script>
+    <script src="lib/pointerLockControls.js"></script>
+    <script type="module" src="game.js"></script>
 </body>
 </html>

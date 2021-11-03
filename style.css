@@ -108,3 +108,23 @@ nav.bottom {
     width: calc(100% - (250px + 300px));
     height: calc(100% - ((125px + 25px) + 25px));
 }
+
+.main .home {
+    position: relative;
+    width: 100px;
+    padding: 10px;
+}
+
+.main .home button {
+    width: 75px;
+    height: 80px;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    color: rgb(204, 204, 204);
+    font-size: 30px;
+}
+
+.main .home button:hover {
+    background-color: rgb(46, 46, 46);
+}
